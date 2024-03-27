@@ -30,10 +30,10 @@ class MeuApp(QMainWindow):
         self.num_7.clicked.connect(lambda: self.btnNumeros(7))
         self.num_8.clicked.connect(lambda: self.btnNumeros(8))
         self.num_9.clicked.connect(lambda: self.btnNumeros(9))
- 
+        self.btnVirgula.clicked.connect(lambda: self.btnNumeros(','))
+
         self.btnTotal.clicked.connect(self.mostrarResultado)
         self.btnLimpar.clicked.connect(self.limparNumeros)
-        self.btnVirgula.clicked.connect(lambda: self.virgula(','))
         self.btnPosNeg.clicked.connect(self.trocaSinal)
 
         self.btnSoma.clicked.connect(lambda: self.definirOperacao(self.somarNumeros))
@@ -49,6 +49,7 @@ class MeuApp(QMainWindow):
     def acessarDisplay(self):
         value = self.btnTela.text()
         value = value.replace(',', '.')
+
         try:
             value = int(value)
         except: 
@@ -56,12 +57,31 @@ class MeuApp(QMainWindow):
         return value
 
     def btnNumeros(self, num):
-        if self.acessarDisplay() == 0:
-            self.exibirDisplay(num)
+        if num == ',':
+            if isinstance(self.acessarDisplay(), int):
+                ultimoValor = str(self.acessarDisplay())
+                self.exibirDisplay(ultimoValor + num)
+
         else:
-            numAtual = self.acessarDisplay()
-            self.exibirDisplay(str(numAtual) + str(num) )
- 
+            if isinstance(self.acessarDisplay(), int):
+                if self.acessarDisplay() == 0:
+                    self.exibirDisplay(str(num))
+                else:
+                    self.exibirDisplay(str(num) + str(num))      
+        
+            else:
+                if self.btnTela.text()[-1] == ',':
+                    pass
+
+
+
+    # def btnNumeros(self, num):
+    #     if self.acessarDisplay() == 0:
+    #         self.exibirDisplay(str(num))
+        
+    #     else:
+    #         self.exibirDisplay(str(num) + str(num))
+    
     def limparNumeros(self):
         self.num1 = 0
         self.num2 = 0
@@ -101,9 +121,6 @@ class MeuApp(QMainWindow):
         self.num1 = self.acessarDisplay()
         self.num2 = 0
         self.exibirDisplay(0)
-            
-    def virgula(self):
-        pass
 
     def mostrarResultado(self):
         
@@ -125,3 +142,5 @@ if __name__ == "__main__":
     window = MeuApp()
     window.show()
     app.exec_()
+
+print(help(isinstance))
