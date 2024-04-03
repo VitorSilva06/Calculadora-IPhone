@@ -1,7 +1,8 @@
 from PyQt5.QtWidgets import *
 from PyQt5.uic import loadUi
 from logger import LogManagemnet
- 
+from os import path
+
 class MeuApp(QMainWindow):
  
     num1 = 0
@@ -15,9 +16,12 @@ class MeuApp(QMainWindow):
  
     def __init__(self):
         super().__init__()
-        loadUi("interCalcIphone.ui", self)
+        loadUi(self.localPath("interCalcIphone.ui"), self)
         self.log.info("Iniciei a interface")
         self.setCalc()
+
+    def localPath(self, relativo):
+        return f'{path.dirname(path.realpath(__file__))}\\{relativo}'
 
     def setCalc(self):
         self.num_0.clicked.connect(lambda: self.btnNumeros(0))
@@ -54,33 +58,44 @@ class MeuApp(QMainWindow):
             value = int(value)
         except: 
             value = float(value)
+            value = round(value, 3)
         return value
 
-    def btnNumeros(self, num):
-        if num == ',':
-            if isinstance(self.acessarDisplay(), int):
-                ultimoValor = str(self.acessarDisplay())
-                self.exibirDisplay(ultimoValor + num)
 
+    def btnNumeros(self, btn):
+        btn = str(btn)
+        #Digitando virgula
+        if btn== ',':
+
+            if isinstance(self.acessarDisplay(), int):
+                ultimoValor = str( self.acessarDisplay() )
+                self.exibirDisplay( ultimoValor + btn)
+
+ 
+        #Digitando numeros
         else:
+            # Se for numero inteiros
             if isinstance(self.acessarDisplay(), int):
                 if self.acessarDisplay() == 0:
-                    self.exibirDisplay(str(num))
+                    self.exibirDisplay( btn)
+
                 else:
-                    self.exibirDisplay(str(num) + str(num))      
-        
+                    ultimoValor = str( self.acessarDisplay() )
+                    self.exibirDisplay(ultimoValor + btn)
+
+           
+            # Se for numero float
             else:
-                if self.btnTela.text()[-1] == ',':
-                    pass
+                if self.btnTela.text()[-1] == ",":
 
+                    ultimoValor = self.btnTela.text()
 
+                    self.exibirDisplay(ultimoValor + btn)
 
-    # def btnNumeros(self, num):
-    #     if self.acessarDisplay() == 0:
-    #         self.exibirDisplay(str(num))
-        
-    #     else:
-    #         self.exibirDisplay(str(num) + str(num))
+               
+                else:
+                    ultimoValor = str( self.acessarDisplay() )
+                    self.exibirDisplay(ultimoValor + btn)
     
     def limparNumeros(self):
         self.num1 = 0
@@ -142,5 +157,3 @@ if __name__ == "__main__":
     window = MeuApp()
     window.show()
     app.exec_()
-
-print(help(isinstance))
