@@ -1,12 +1,15 @@
-# Nome do projeto
+# Calculadora Iphone <img src="calculator.ico" width="32" alt="Icone da Calculadora iphone">
 
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+<div align="center">
 
-<img src="imagem.png" alt="Exemplo imagem">
+![Python](https://img.shields.io/badge/PYthon-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyQT5](https://img.shields.io/badge/Qt-%?style=for-the-badge)
+![Windows](https://img.shields.io/badge/windows-%?style=for-the-badge)
+
+
+
+<img src="fotoExemplo.png"  alt="Main da Calculadora iphone">
+</div>
 
 > Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
 
