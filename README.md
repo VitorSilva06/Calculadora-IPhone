@@ -70,7 +70,8 @@ Para contribuir com <nome_do_projeto>, siga estas etapas:
   <tr>
     <td align="center">
       <a href="#" title="Vitor da Silva">
-        <img src="https://avatars.githubusercontent.com/u/164203021?v=4,
+        <img src="![image](https://github.com/VitorSilva06/Calculadora-IPhone/assets/164203021/173e1d15-ccbf-4046-a982-2d5ea1bdb882)
+,
           " width="100px;" alt="Foto do Vitor Silva no GitHub"/><br>
       </a>
     </td>
