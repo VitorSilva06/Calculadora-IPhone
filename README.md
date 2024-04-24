@@ -54,16 +54,6 @@ Windows:
 <comando_de_instalação>
 ```
 
-## ☕ Usando <calculadora Iphone>
-
-Para usar <python.main>, siga estas etapas:
-
-```
-
-
-```
-
-Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
 
 ## 📫 Contribuindo para <calculadora Iphone>
 
@@ -75,15 +65,13 @@ Para contribuir com <nome_do_projeto>, siga estas etapas:
 4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
 5. Crie a solicitação de pull.
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
-
 
 <table>
   <tr>
     <td align="center">
       <a href="#" title="Vitor da Silva">
-        <img src="https://avatars.githubusercontent.com/u/164203021?v=40,
-          " width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/164203021?v=4,
+          " width="100px;" alt="Foto do Vitor Silva no GitHub"/><br>
       </a>
     </td>
   </tr>
