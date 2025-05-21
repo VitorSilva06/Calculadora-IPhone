@@ -6,8 +6,6 @@
 ![PyQt5](https://img.shields.io/badge/PyQt5-41CD52?style=for-the-badge&logo=qt&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-<img src="fotoExemplo.png" alt="Exemplo da Interface da Calculadora iPhone" width="300">
-
 </div>
 
 > Projeto de uma calculadora inspirada na interface do iPhone, desenvolvida em Python com PyQt5. O objetivo é simular a aparência e o funcionamento da calculadora do iOS, com uma interface amigável e responsiva.
